@@ -2,7 +2,6 @@
 -React
 -Redux
 -Material-UI
--Framer Motion
 
 Функції, які виконує додаток:
 -Додавання завдань
