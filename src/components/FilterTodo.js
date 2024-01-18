@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Button } from '@mui/material';
 import { setFilter } from '../redux/actions/filterActions';
 
-const FilterTodo = ({ dispatchSetFilter, filter }) => {
+const FilterTodo = ({ dispatchSetFilter }) => {
   return (
     <div>
       <Button onClick={() => dispatchSetFilter('ALL')}>All</Button>

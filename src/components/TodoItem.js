@@ -6,6 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const TodoItem = ({ todo, dispatchRemoveTodo, dispatchToggleTodo }) => {
+  
   return (
     <ListItem
     sx={{

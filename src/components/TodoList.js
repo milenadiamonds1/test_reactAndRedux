@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import TodoItem from './TodoItem';
 import AddTodoForm from './AddTodoForm';
 import FilterTodo from './FilterTodo';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Box, List, Typography } from '@mui/material';
 
 const TodoList = ({ todos, visibilityFilter }) => {
@@ -20,6 +19,10 @@ const TodoList = ({ todos, visibilityFilter }) => {
 
   const filteredTodos = applyFilter(todos, visibilityFilter);
 
+  const fadeInOutAnimation = {
+    transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out',
+  };
+
   return (
     <Box
       sx={{
@@ -30,24 +33,24 @@ const TodoList = ({ todos, visibilityFilter }) => {
         margin: '0 auto',
       }}
     >
-      <Typography variant="h4" mb={2}>
+      <Typography variant='h4' mb={2}>
         Todo List
       </Typography>
       <AddTodoForm />
       <FilterTodo />
       <List>
-        <AnimatePresence>
-          {filteredTodos.map((todo) => (
-            <motion.div
-              key={todo.id}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <TodoItem todo={todo} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
+        {filteredTodos.map((todo) => (
+          <div
+            key={todo.id}
+            style={{
+              ...fadeInOutAnimation,
+              opacity: todo.completed ? 0.5 : 1,
+              transform: todo.completed ? 'translateY(-2px)' : 'translateY(0)',
+            }}
+          >
+            <TodoItem todo={todo} />
+          </div>
+        ))}
       </List>
     </Box>
   );
