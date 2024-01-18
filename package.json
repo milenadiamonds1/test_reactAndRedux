@@ -2,6 +2,7 @@
   "name": "test_reactAndRedux",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://milenadiamonds1.github.io/test_reactAndRedux",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
