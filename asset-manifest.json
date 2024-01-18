@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/test_reactAndRedux/static/js/main.8ebf061d.js",
+    "main.js": "/test_reactAndRedux/static/js/main.f92a8e5b.js",
     "index.html": "/test_reactAndRedux/index.html",
-    "main.8ebf061d.js.map": "/test_reactAndRedux/static/js/main.8ebf061d.js.map"
+    "main.f92a8e5b.js.map": "/test_reactAndRedux/static/js/main.f92a8e5b.js.map"
   },
   "entrypoints": [
-    "static/js/main.8ebf061d.js"
+    "static/js/main.f92a8e5b.js"
   ]
 }
